@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% extends "emailSender_app/base.html" %}
+   <title>Email Sender App</title>
+</head>
+<body>
+  
+  {% block content %} 
+    <div class='intro'>The Email is sent.Thank You for using Automated Email Sender.</div>
+    <a href="{% url 'home' %}"><button class='emailSenderbtn'> Back to Homepage </button></a>
+  {% endblock %}
+</body>
+</html>

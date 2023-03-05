@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    {% block headBlock %} 
+        <link rel="stylesheet" href="{% static 'emailSender_app/base.css' %}">
+    {% endblock %}
+</head>
+<body>
+  <div class='header'> 
+  <p class='header_text'>Automated Email Sender <p> 
+  </div>
+  {% block content %} {% endblock %}
+</body>
+</html>

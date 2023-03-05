@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% extends "emailSender_app/base.html" %}
+   {% load static %}
+    {% block headBlock %} 
+        <link rel="stylesheet" href="{% static 'emailSender_app/base.css' %}">
+    {% endblock %}
+   <title>Email Sender App</title>
+</head>
+<body>
+  
+  {% block content %} 
+    <div class='intro'>This website is an integration of my Python CLI/GUI. This app was created using HTML, CSS, Python, and Django. The user of this web application must click the "Go To Email Sender" button. This will open a form where you must fill out the sender email, sender app password (information on where to get that is supplied under the form), receiver email (at this time, only one receiver may be added), subject, and body. After that, you must push the email send button. It can take a while, so please only press it once and be patient. Pressing the button multiple times will send the email multiple times, spamming the receiver's inbox. You will be taken to a thank you page.</div>
+    <a href="{% url 'emailcreate' %}"><button class='emailSenderbtn'> Go To Email Sender </button></a>
+    <div class='info'><h2>About the Creator</h2>
+    I'm Jiya, and I'm 15 years old. I've been learning to code since I was 9. I am proficient in Python, HTML, and CSS. I wish to go MIT as well as France to study.
+I am passionate about coding, fashion design, and finance. I am skilled in using Canva, Figma, NumPy, Pandas, Plotly, Notion, SQLite, Python, JavaScript, CSS3, HTML5, Pandas, and JavaScript. My GitHub username is Jiya55.
+    </div>
+  {% endblock %}
+</body>
+</html>
