@@ -17,7 +17,7 @@ def test(request):
   return HttpResponse(template.render())
 
 def thankYoupage(request):
-  template = loader.get_template("emailSender_app/ThankYouPage.html")
+  template = loader.get_template("emailSender_app/ThankYoupage.html")
   return HttpResponse(template.render())
 
 def send_email(request):
@@ -33,6 +33,6 @@ def send_email(request):
       subject= MyEmailForm.cleaned_data['subject']
       body= MyEmailForm.cleaned_data['body']
       email_sender_bot(senderEmailAddress,senderAppPassword,receiverEmailAddress,subject,body)
-      return render(request, 'emailSender_app/ThankYouPage.html')
+      return render(request, 'emailSender_app/ThankYoupage.html')
     else:
       return render(request, 'emailSender_app/index.html')
